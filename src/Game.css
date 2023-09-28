@@ -1,0 +1,92 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+}
+  
+  ol, ul {
+    padding-left: 30px;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+  }
+  
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 50px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 50px;
+    color: black;
+  }
+
+  .square-selected {
+    background: green !important;
+    color: white !important;
+  }
+
+  .square-bingo {
+    background: green !important;
+    color: white !important;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  /* .game {
+    display: flex;
+    flex-direction: row;
+  } */
+  
+  .game-info {
+    margin-left: 20px;
+  }
+  .board-row {
+    justify-content: center;
+    display: flex;
+  }
+
+  .restart {
+    background: #008000;
+    margin: 10px;
+    color: white;
+    font-size: 25px;
+  }
+
+  /* Add this to your CSS stylesheet */
+.crossed-square {
+    position: relative;
+}
+
+.crossed-square::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Adjust the thickness of the line as needed */
+    background-color: red; /* Adjust the color of the line as needed */
+    top: 50%;
+    transform: rotate(45deg);
+    left: 0;
+}
+.bingo {
+    justify-content: center;
+    display: flex;
+    margin: 10px;
+}
