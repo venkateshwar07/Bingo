@@ -17,7 +17,7 @@ class Home extends Component {
     };
 
     // Initialize WebSocket in the constructor
-    this.ws = new WebSocket("ws://localhost:8000/ws");
+    this.ws = new WebSocket("ws://13.51.85.157:5000/ws");
 
     this.ws.onopen = () => {
       console.log("WebSocket connection is open.");
@@ -64,7 +64,7 @@ class Home extends Component {
         code: this.state.code,
       };
       const response = await axios.post(
-        "http://localhost:8000/join-game",
+        "http://13.51.85.157:5000/join-game",
         dataToSend
       );
       console.log("Join Game response:", response.data);
@@ -86,7 +86,7 @@ class Home extends Component {
         name: this.state.name,
       };
       const response = await axios.post(
-        "http://localhost:8000/host-game",
+        "http://13.51.85.157:5000/host-game",
         dataToSend
       );
       console.log("Host Game response:", response.data);
@@ -108,7 +108,7 @@ class Home extends Component {
         code: gameCode,
       };
       const response = await axios.post(
-        "http://localhost:8000/players-list",
+        "http://13.51.85.157:5000/players-list",
         dataToSend
       );
       console.log("Players List response:", response.data);
@@ -128,7 +128,7 @@ class Home extends Component {
         name: this.state.name,
         code: value.code
       };
-      const response = await axios.post("http://localhost:8000/publish", dataToSend);
+      const response = await axios.post("http://13.51.85.157:5000/publish", dataToSend);
       console.log("Publish response:", response.data);
     } catch (error) {
       console.error("Error sending publish request:", error);

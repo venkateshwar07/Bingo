@@ -56,7 +56,7 @@ class Board extends Component {
             bingoCount: 0
         }
 
-        this.ws = new WebSocket('ws://localhost:8000/ws'); // WebSocket endpoint URL
+        this.ws = new WebSocket('ws://13.51.85.157:5000/ws'); // WebSocket endpoint URL
 
         this.ws.onopen = () => {
             // The WebSocket is now open, you can send data
@@ -116,7 +116,7 @@ class Board extends Component {
               code: this.props.code
             };
             dataToSend = {...dataToSend, ...payload};
-            const response = await axios.post('http://localhost:8000/publish', dataToSend);
+            const response = await axios.post('http://13.51.85.157:5000/publish', dataToSend);
             console.log('Publish response:', response.data);
           } catch (error) {
             console.error('Error sending publish request:', error);
